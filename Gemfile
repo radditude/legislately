@@ -27,6 +27,13 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# angular things
+
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
+gem "angular-rails-templates"
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'active_model_serializers'
 gem 'jbuilder', '~> 2.5'
