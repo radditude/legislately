@@ -1,0 +1,2 @@
+class UserLegislator < ApplicationRecord
+end
