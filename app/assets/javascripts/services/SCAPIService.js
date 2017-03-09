@@ -6,6 +6,10 @@ function SCAPIService($http) {
   this.getComingSoon = function() {
     return $http.get(baseUrl + '/upcoming_bills?order=scheduled_at');
   };
+
+  this.findLegislatorsByZip = function(zip) {
+    return $http.get(baseUrl + '/legislators/locate?zip=' + zip);
+  };
 }
 
 angular
