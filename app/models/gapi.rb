@@ -1,0 +1,2 @@
+class Gapi < ApplicationRecord
+end
