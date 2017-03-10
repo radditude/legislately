@@ -5,6 +5,8 @@ class GapiController < ApplicationController
       req.params['key'] = ENV['GOOGLE_API_KEY']
       req.params['address'] = '2732+orleans+ave+new+orleans+la+70119'
     end
-    render json: @resp.body
+    body_hash = JSON.parse(@resp.body)
+    location = body_hash['results'][0]['geometry']['location']
+    render json: location
   end
 end
