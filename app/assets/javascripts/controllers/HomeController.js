@@ -12,7 +12,9 @@ function HomeController(SCAPIService, GoogleMapsService) {
   home.results;
 
   home.findLegislators = function(address) {
-    console.log(GoogleMapsService.geocodeAddress(address));
+    GoogleMapsService.geocodeAddress(address).then(function(res) {
+      console.log(res);
+    });
     SCAPIService.findLegislatorsByZip(address.zip).then(function(res) {
       home.results = res.data.results;
       console.log(home.results);
