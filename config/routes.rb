@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/gapis', to: 'gapis#index'
+  get '/gapi', to: 'gapi#geocode'
   devise_for :users
   root 'application#index'
 end
