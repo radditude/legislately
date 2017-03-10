@@ -34,6 +34,10 @@ source "https://rails-assets.org" do
 end
 gem "angular-rails-templates"
 
+# for the single API request we need to make from the backend
+
+gem 'faraday'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'active_model_serializers'
 gem 'jbuilder', '~> 2.5'
