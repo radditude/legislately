@@ -10,6 +10,13 @@ function SCAPIService($http) {
   this.findLegislatorsByZip = function(zip) {
     return $http.get(baseUrl + '/legislators/locate?zip=' + zip);
   };
+
+  this.findLegislatorsByLatLong = function(location) {
+    var lat = location.lat;
+    var long = location.lng;
+
+    return $http.get(baseUrl + '/legislators/locate?latitude=' + lat + '&longitude=' + long);
+  };
 }
 
 angular

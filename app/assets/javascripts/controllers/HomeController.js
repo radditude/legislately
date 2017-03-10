@@ -12,13 +12,18 @@ function HomeController(SCAPIService, GoogleMapsService) {
   home.results;
 
   home.findLegislators = function(address) {
-    GoogleMapsService.geocodeAddress(address).then(function(res) {
-      console.log(res);
-    });
-    SCAPIService.findLegislatorsByZip(address.zip).then(function(res) {
-      home.results = res.data.results;
-      console.log(home.results);
-    })
+    if (address.street === "" && address.city === "" && address.state === "") {
+      SCAPIService.findLegislatorsByZip(address.zip).then(function(res) {
+        home.results = res.data.results;
+      })
+    } else {
+      GoogleMapsService.geocodeAddress(address).then(function(res) {
+        var data = res.data;
+        SCAPIService.findLegislatorsByLatLong(data).then(function(res) {
+          home.results = res.data.results;
+        })
+      });
+    }
   }
 }
 

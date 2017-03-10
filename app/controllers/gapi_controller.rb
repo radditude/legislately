@@ -1,7 +1,6 @@
 class GapiController < ApplicationController
   def geocode
     url = 'https://maps.googleapis.com/maps/api/geocode/json'
-    byebug
     address_string = "#{gapi_params['street']}+#{gapi_params['city']}+#{gapi_params['state']}+#{gapi_params['zip']}"
     address_string.gsub!(" ", "+")
 
