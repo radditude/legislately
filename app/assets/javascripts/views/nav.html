@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    <li><a ui-sref="home">Legislately</a></li>
+    <li><a ui-sref="coming-soon">Coming Soon</a></li>
+    <li ng-hide="signedIn()"><a ui-sref="login">Login</a></li>
+    <li ng-hide="signedIn()"><a ui-sref="register">Register</a></li>
+    <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
+  </ul>
+</div>
