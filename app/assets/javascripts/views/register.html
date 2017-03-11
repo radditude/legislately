@@ -1,0 +1,9 @@
+<h1>Register</h1>
+<form ng-submit="register()">
+  <input type="email" placeholder="Email" ng-model="user.email" autofocus>
+  <input type="username" placeholder="Username" ng-model="user.username">
+  <input type="password" placeholder="Password" ng-model="user.password">
+  <input type="submit" value="Sign Up">
+</form>
+
+<p>Already signed up? <a ui-sref="login">Log in.</a></p>
