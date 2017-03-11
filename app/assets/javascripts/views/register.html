@@ -1,8 +1,8 @@
 <h1>Register</h1>
-<form ng-submit="register()">
-  <input type="email" placeholder="Email" ng-model="user.email" autofocus>
-  <input type="username" placeholder="Username" ng-model="user.username">
-  <input type="password" placeholder="Password" ng-model="user.password">
+<form ng-submit="auth.register()">
+  <input type="email" placeholder="Email" ng-model="auth.user.email" autofocus>
+  <input type="username" placeholder="Username" ng-model="auth.user.username">
+  <input type="password" placeholder="Password" ng-model="auth.user.password">
   <input type="submit" value="Sign Up">
 </form>
 

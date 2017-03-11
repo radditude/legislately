@@ -1,6 +1,6 @@
 <h1 class="centered-text">Log In</h1>
-<form ng-submit="login()">
-  <input type="email" placeholder="Email" ng-model="user.email" autofocus>
-  <input type="password" placeholder="Password" ng-model="user.password">
+<form ng-submit="auth.login()">
+  <input type="email" placeholder="Email" ng-model="auth.user.email" autofocus>
+  <input type="password" placeholder="Password" ng-model="auth.user.password">
   <input type="submit" value="Log In">
 </form>
