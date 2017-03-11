@@ -15,6 +15,7 @@ function NavController($scope, Auth, $rootScope) {
   });
 
   $scope.$on('devise:logout', function (e, user) {
+    // TODO: make this message display better cause alerts suck
     alert("You have been logged out.");
     $rootScope.user = undefined;
   });

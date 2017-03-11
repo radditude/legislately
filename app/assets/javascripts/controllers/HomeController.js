@@ -11,6 +11,10 @@ function HomeController(SCAPIService, GoogleMapsService) {
   // results
   home.results;
 
+  // TODO: figure out how to display a loading animation while waiting
+  // for this request chain to come back. The double requests on the
+  // address search are a little laggy.
+
   home.findLegislators = function(address) {
     if (address.street === "" && address.city === "" && address.state === "") {
       SCAPIService.findLegislatorsByZip(address.zip).then(function(res) {
