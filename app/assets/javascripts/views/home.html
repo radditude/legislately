@@ -10,7 +10,9 @@
 
 <ul>
   <li ng-repeat="result in home.results">
-    {{ result.first_name }} {{ result.middle_name }} {{ result.last_name }} ({{ result.chamber }},
-    {{ result.party }}-{{ result.state }}{{ result.district }})
+    <a ui-sref="show.activity({ id: result.bioguide_id })">
+      {{ result.first_name }} {{ result.middle_name }} {{ result.last_name }} ({{ result.chamber }},
+      {{ result.party }}-{{ result.state }}{{ result.district }})
+    </a>
   </li>
 </ul>
