@@ -1,6 +1,6 @@
 // handles all calls to Sunlight Congress API
 
-function SCAPIService($http) {
+function SCAPIService($http, $sce) {
   var baseUrl = 'https://congress.api.sunlightfoundation.com';
 
   this.getComingSoon = function() {
@@ -19,7 +19,11 @@ function SCAPIService($http) {
   };
 
   this.getLegislatorById = function(id) {
-    return $http.get(baseUrl + '/legislators?bioguide_id=' + id + '&all_legislators=true');
+    return $http.get(baseUrl + '/legislators?bioguide_id=' + id.toUpperCase() + '&all_legislators=true');
+  }
+
+  this.getVotesByLegislator = function(id, page) {
+    return $http.get(baseUrl + '/votes?voter_ids.' + id.toUpperCase() + '__exists=true&page=' + page);
   }
 }
 

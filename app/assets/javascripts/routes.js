@@ -32,10 +32,23 @@ angular
         templateUrl: 'views/show.html',
         controller: 'ShowController as show',
         resolve: {
-          legislator: function(SCAPIService, $stateParams) {
+          info: function(SCAPIService, $stateParams) {
             return SCAPIService.getLegislatorById($stateParams.id);
+          },
+          votes: function(SCAPIService, $stateParams) {
+            return SCAPIService.getVotesByLegislator($stateParams.id, 1);
           }
         }
+      })
+      .state('show.info', {
+        url: '/info',
+        templateUrl: 'views/show.info.html',
+        controller: 'ShowController as show'
+      })
+      .state('show.activity', {
+        url: '/activity',
+        templateUrl: 'views/show.activity.html',
+        controller: 'ShowController as show'
       })
       .state('coming-soon', {
         url: '/coming-soon',
