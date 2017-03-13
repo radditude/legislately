@@ -27,6 +27,16 @@ angular
           })
         }
       })
+      .state('show', {
+        url: '/legislators/:id',
+        templateUrl: 'views/show.html',
+        controller: 'ShowController as show',
+        resolve: {
+          legislator: function(SCAPIService, $stateParams) {
+            return SCAPIService.getLegislatorById($stateParams.id);
+          }
+        }
+      })
       .state('coming-soon', {
         url: '/coming-soon',
         templateUrl: 'views/coming-soon.html',

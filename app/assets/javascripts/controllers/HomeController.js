@@ -19,12 +19,14 @@ function HomeController(SCAPIService, GoogleMapsService) {
     if (address.street === "" && address.city === "" && address.state === "") {
       SCAPIService.findLegislatorsByZip(address.zip).then(function(res) {
         home.results = res.data.results;
+        console.log(home.results);
       })
     } else {
       GoogleMapsService.geocodeAddress(address).then(function(res) {
         var data = res.data;
         SCAPIService.findLegislatorsByLatLong(data).then(function(res) {
           home.results = res.data.results;
+          console.log(home.results);
         })
       });
     }

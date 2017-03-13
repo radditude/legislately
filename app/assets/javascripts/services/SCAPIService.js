@@ -17,6 +17,10 @@ function SCAPIService($http) {
 
     return $http.get(baseUrl + '/legislators/locate?latitude=' + lat + '&longitude=' + long);
   };
+
+  this.getLegislatorById = function(id) {
+    return $http.get(baseUrl + '/legislators?bioguide_id=' + id + '&all_legislators=true');
+  }
 }
 
 angular
