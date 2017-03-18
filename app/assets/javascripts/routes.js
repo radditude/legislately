@@ -27,6 +27,11 @@ angular
           })
         }
       })
+      .state('newsfeed', {
+        url: '/feed',
+        templateUrl: 'views/newsfeed.html',
+        controller: 'NewsfeedController as news'
+      })
       .state('show', {
         url: '/legislators/:id',
         templateUrl: 'views/show.html',
