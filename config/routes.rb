@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   post '/legislators/:id/follow', to: 'legislator#follow'
   
-  post '/gapi', to: 'gapi#geocode'
+  post '/locateaddress', to: 'google_civic_api#index'
   
   devise_for :users
   

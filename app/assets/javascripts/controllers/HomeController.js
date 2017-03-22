@@ -1,4 +1,4 @@
-function HomeController(SCAPIService, GoogleMapsService) {
+function HomeController(SCAPIService, GoogleCivicAPIService) {
   var home = this;
   // search params
   home.address = {
@@ -16,24 +16,17 @@ function HomeController(SCAPIService, GoogleMapsService) {
   // address search are a little laggy.
 
   home.findLegislators = function(address) {
-    if (address.street === "" && address.city === "" && address.state === "") {
-      SCAPIService.findLegislatorsByZip(address.zip).then(function(res) {
-        home.results = res.data.results;
-        console.log(home.results);
-      })
-    } else {
-      GoogleMapsService.geocodeAddress(address).then(function(res) {
+      GoogleCivicAPIService.findAddress(address).then(function(res) {
         var data = res.data;
         SCAPIService.findLegislatorsByLatLong(data).then(function(res) {
           home.results = res.data.results;
           console.log(home.results);
         })
       });
-    }
   }
 }
 
-HomeController.$inject = ['SCAPIService', 'GoogleMapsService'];
+HomeController.$inject = ['SCAPIService', 'GoogleCivicAPIService'];
 
 angular
   .module('legislately')
