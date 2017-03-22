@@ -7,16 +7,16 @@ function SCAPIService($http, $sce) {
     return $http.get(baseUrl + '/upcoming_bills?order=scheduled_at');
   };
 
-  this.findLegislatorsByZip = function(zip) {
-    return $http.get(baseUrl + '/legislators/locate?zip=' + zip);
-  };
+  // this.findLegislatorsByZip = function(zip) {
+  //   return $http.get(baseUrl + '/legislators/locate?zip=' + zip);
+  // };
 
-  this.findLegislatorsByLatLong = function(location) {
-    var lat = location.lat;
-    var long = location.lng;
+  // this.findLegislatorsByLatLong = function(location) {
+  //   var lat = location.lat;
+  //   var long = location.lng;
 
-    return $http.get(baseUrl + '/legislators/locate?latitude=' + lat + '&longitude=' + long);
-  };
+  //   return $http.get(baseUrl + '/legislators/locate?latitude=' + lat + '&longitude=' + long);
+  // };
 
   this.getLegislatorById = function(id) {
     return $http.get(baseUrl + '/legislators?bioguide_id=' + id.toUpperCase() + '&all_legislators=true');

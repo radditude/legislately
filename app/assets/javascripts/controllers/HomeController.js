@@ -18,10 +18,7 @@ function HomeController(SCAPIService, GoogleCivicAPIService) {
   home.findLegislators = function(address) {
       GoogleCivicAPIService.findAddress(address).then(function(res) {
         var data = res.data;
-        SCAPIService.findLegislatorsByLatLong(data).then(function(res) {
-          home.results = res.data.results;
-          console.log(home.results);
-        })
+        console.log(data)
       });
   }
 }
