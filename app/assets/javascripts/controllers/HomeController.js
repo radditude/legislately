@@ -19,6 +19,7 @@ function HomeController(SCAPIService, GoogleCivicAPIService) {
       GoogleCivicAPIService.findAddress(address).then(function(res) {
         var data = res.data;
         console.log(data)
+        home.results = data;
       });
   }
 }

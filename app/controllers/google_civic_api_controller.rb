@@ -17,6 +17,10 @@ class GoogleCivicApiController < ApplicationController
     result = body_hash['offices'][3]['name']
     result.slice!("United States House of Representatives ")
     result_array = result.split('-')
+    district = {
+      state: result_array[0],
+      district: result_array[1]
+    }
     
     # setting up the call to ProPublica Congress API
     senate_url = "https://api.propublica.org/congress/v1/members/senate/#{result_array[0]}/current.json"
@@ -34,8 +38,8 @@ class GoogleCivicApiController < ApplicationController
     senators = JSON.parse(@senate_resp.body)
     house = JSON.parse(@house_resp.body)
     full_result = {
-      senators: senators['results'],
-      house: house['results']
+      info: district,
+      reps: senators['results'] + house['results']
     }
     
     render json: full_result

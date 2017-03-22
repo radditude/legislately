@@ -9,10 +9,10 @@
 </form>
 
 <ul>
-  <li ng-repeat="result in home.results">
-    <a ui-sref="show.activity({ id: result.bioguide_id })">
-      {{ result.first_name }} {{ result.middle_name }} {{ result.last_name }} ({{ result.chamber }},
-      {{ result.party }}-{{ result.state }}{{ result.district }})
+  <li ng-repeat="result in home.results.reps">
+    <a ui-sref="show.activity({ id: result.id })">
+      {{ result.name }} ({{ result.role }},
+      {{ result.party }}</span>)
     </a>
   </li>
 </ul>
