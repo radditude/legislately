@@ -7,4 +7,22 @@ https://congress.api.sunlightfoundation.com/votes?fields=breakdown,bill_id,nomin
 - converting sunlight API calls to propublica API calls
 - switching the locate mechanism to use the Google Civic API
 - moving all API calls to the backend
+- 
+
+API calls:
+GCD - https://www.googleapis.com/civicinfo/v2/representatives?key=key&address=2732%20Orleans%20Ave%20New%20Orleans%20LA%2070119&fields=divisions
+
+PP - Header { X-API-Key: key }
+
+get senators for given state
+https://api.propublica.org/congress/v1/members/senate/{state}/current.json
+
+get house rep for given district
+https://api.propublica.org/congress/v1/members/house/{state}/{district}/current.json
+
+get votes for rep by ID
+https://api.propublica.org/congress/v1/members/{member-id}/votes.json
+
+get bill activity for rep by ID & type (type can be introduced or updated)
+https://api.propublica.org/congress/v1/members/{member-id}/bills/{type}.json
 
