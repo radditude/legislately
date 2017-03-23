@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   post '/legislators/:id/follow', to: 'legislator#follow'
 
-  get '/legislators/:id', to: 'legislator#show'
+  get '/legislators/:id', to: 'legislator#info'
 
   get '/legislators/:id/votes', to: 'legislator#votes'
 

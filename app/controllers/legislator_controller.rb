@@ -8,7 +8,7 @@ class LegislatorController < ApplicationController
         UserLegislator.create(legislator_id: legislator_id, user_id: user_id)
     end
 
-    def show
+    def info
       legislator_id = params[:id]
       url = "https://api.propublica.org/congress/v1/members/#{legislator_id}.json"
       @resp = Faraday.get url do |req|

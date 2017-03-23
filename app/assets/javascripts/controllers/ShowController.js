@@ -1,19 +1,19 @@
-function ShowController(info, votes, FollowService) {
+function ShowController(info, votes, LegislatorFactory) {
   var show = this;
-  show.profile = info.data.results[0];
+  show.profile = info.data;
   console.log(show.profile);
 
-  show.votes = votes.data.results;
+  show.votes = votes.data;
   console.log(show.votes);
-  
+
   show.follow = function(id) {
-    FollowService.followLegislator(id).then(function(res) {
+    LegislatorFactory.follow(id).then(function(res) {
       console.log(res);
     });
   };
 }
 
-ShowController.$inject = ['info', 'votes', 'FollowService'];
+ShowController.$inject = ['info', 'votes', 'LegislatorFactory'];
 
 angular
   .module('legislately')

@@ -37,11 +37,11 @@ angular
         templateUrl: 'views/show.html',
         controller: 'ShowController as show',
         resolve: {
-          info: function(SCAPIService, $stateParams) {
-            return SCAPIService.getLegislatorById($stateParams.id);
+          info: function(LegislatorFactory, $stateParams) {
+            return LegislatorFactory.info($stateParams.id);
           },
-          votes: function(SCAPIService, $stateParams) {
-            return SCAPIService.getVotesByLegislator($stateParams.id, 1);
+          votes: function(LegislatorFactory, $stateParams) {
+            return LegislatorFactory.votes($stateParams.id);
           }
         }
       })
