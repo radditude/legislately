@@ -47,13 +47,11 @@ angular
       })
       .state('show.info', {
         url: '/info',
-        templateUrl: 'views/show.info.html',
-        controller: 'ShowController as show'
+        templateUrl: 'views/show.info.html'
       })
       .state('show.activity', {
         url: '/activity',
-        templateUrl: 'views/show.activity.html',
-        controller: 'ShowController as show'
+        templateUrl: 'views/show.activity.html'
       })
       .state('coming-soon', {
         url: '/coming-soon',
