@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get '/legislators/:id/votes', to: 'legislator#votes'
 
-  get '/legislators/:id/bills', to: 'legislator#bills'
+  get '/legislators/:id/bills/introduced', to: 'legislator#bills_introduced'
+
+  get '/legislators/:id/bills/updated', to: 'legislator#bills_updated'
 
   post '/locateaddress', to: 'google_civic_api#index'
 

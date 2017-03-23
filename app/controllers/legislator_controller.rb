@@ -32,9 +32,21 @@ class LegislatorController < ApplicationController
       render json: votes
     end
 
-    def bills
+    def bills_introduced
       legislator_id = params[:id]
       url = "https://api.propublica.org/congress/v1/members/#{legislator_id}/bills/introduced.json"
+      @resp = Faraday.get url do |req|
+        req.headers['X-API-Key'] = ENV['PROPUBLICA_API_KEY']
+      end
+
+      body_hash = JSON.parse(@resp.body)
+      # bills = body_hash['results'][0]
+      render json: body_hash
+    end
+
+    def bills_updated
+      legislator_id = params[:id]
+      url = "https://api.propublica.org/congress/v1/members/#{legislator_id}/bills/updated.json"
       @resp = Faraday.get url do |req|
         req.headers['X-API-Key'] = ENV['PROPUBLICA_API_KEY']
       end
