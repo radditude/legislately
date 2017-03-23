@@ -60,8 +60,8 @@ angular
         templateUrl: 'views/coming-soon.html',
         controller: 'ComingSoonController as soon',
         resolve: {
-          comingSoon: function(SCAPIService) {
-            return SCAPIService.getComingSoon();
+          comingSoon: function(SCAPIFactory) {
+            return SCAPIFactory.getComingSoon();
           }
         }
       });

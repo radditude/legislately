@@ -1,4 +1,4 @@
-function HomeController(SCAPIService, GoogleCivicAPIService) {
+function HomeController(LegislatorFactory) {
   var home = this;
   // search params
   home.address = {
@@ -16,7 +16,7 @@ function HomeController(SCAPIService, GoogleCivicAPIService) {
   // address search are a little laggy.
 
   home.findLegislators = function(address) {
-      GoogleCivicAPIService.findAddress(address).then(function(res) {
+      LegislatorFactory.findAddress(address).then(function(res) {
         var data = res.data;
         console.log(data)
         home.results = data;
@@ -24,7 +24,7 @@ function HomeController(SCAPIService, GoogleCivicAPIService) {
   }
 }
 
-HomeController.$inject = ['SCAPIService', 'GoogleCivicAPIService'];
+HomeController.$inject = ['LegislatorFactory'];
 
 angular
   .module('legislately')
