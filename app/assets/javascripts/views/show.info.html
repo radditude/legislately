@@ -1,5 +1,5 @@
-<p><a ui-sref="show.activity({ id: show.profile.bioguide_id })">View Activity</a></p>
+<p><a ui-sref="show.activity({ id: show.profile.member_id })">View Activity</a></p>
 
-<p>{{ show.profile.chamber }} {{ show.profile.party }}-{{ show.profile.state }}{{ show.profile.district }}</p>
+<p>{{ show.profile.roles[0].title }} ({{ show.profile.current_party }}-{{ show.profile.roles[0].state }}){{ show.profile.roles[0].district }}</p>
 
-<p>{{ show.profile.oc_email }}</p>
+<p>{{ show.profile.url }}</p>
