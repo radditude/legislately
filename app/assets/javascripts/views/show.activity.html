@@ -1,3 +1,8 @@
 <p><a ui-sref="show.info({ id: show.profile.member_id })">View Info</a></p>
 
-<p>{{ show.votes[0] }}</p>
+<ul>
+  <li ng-repeat="vote in show.votes">
+    <p>Voted {{ vote.position }} {{ vote.question }} - {{ vote.description }}</p>
+    <p><i>{{ vote.date | date : "M/d" }}</i></p>
+  </li>
+</ul>
