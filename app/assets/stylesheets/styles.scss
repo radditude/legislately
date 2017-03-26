@@ -3,21 +3,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
 
-// Part 1: abusing !important to override Bootstrap defaults
+// BASIC SETTINGS
 
-html {
+html, body, .container {
   height: 100%;
 }
+
+// COLOR & TYPOGRAPHY (aka abusing the !important option to override Bootstrap defaults)
 
 body {
   font-family: 'Lato' !important;
   background-color: #0971B2 !important;
-  height: 100%;
 }
 
 .container {
   background-color: #FEFFFE;
-  height: 100%;
   padding-top: 20px;
 }
 
@@ -34,15 +34,14 @@ nav a {
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 2px;
-  text-transform: uppercase;
   color: #FEFFFE !important;
 }
 
-.navbar-nav li:hover, .navbar-nav li:focus {
-  opacity: .5;
+.icon-bar {
+  background-color: #FEFFFE !important;
 }
 
-.navbar-form input, .navbar-form button {
+nav a, .navbar-form input, .navbar-form button {
   text-transform: uppercase;
 }
 
@@ -51,6 +50,8 @@ nav a {
   font-size: 30px;
 }
 
-.icon-bar {
-  background-color: #FEFFFE !important;
+// BEHAVIOR
+
+.navbar-nav li:hover, .navbar-nav li:focus {
+  opacity: .5;
 }
