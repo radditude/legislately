@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  background-color: #FFFFFF;
+  background-color: #FEFFFE;
   height: 100%;
 }
 
@@ -26,6 +26,7 @@ nav {
   border-radius: 0 !important;
   font-family: 'Open Sans Condensed';
   margin: 0 !important;
+  box-shadow: 1px 1px 2px;
 }
 
 nav a {
@@ -33,7 +34,7 @@ nav a {
   font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #FFFFFF !important;
+  color: #FEFFFE !important;
 }
 
 .navbar-form input, .navbar-form button {
@@ -43,4 +44,8 @@ nav a {
 #navbar-brand {
   font-weight: 700;
   font-size: 30px;
+}
+
+.icon-bar {
+  background-color: #FEFFFE !important;
 }
