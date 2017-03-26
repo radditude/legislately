@@ -3,10 +3,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
 
-// Part 1: overriding Bootstrap defaults
+// Part 1: abusing !important to override Bootstrap defaults
+
+html {
+  height: 100%;
+}
 
 body {
   font-family: 'Lato' !important;
+  background-color: #0971B2 !important;
+  height: 100%;
+}
+
+.container {
+  background-color: #FFFFFF;
+  height: 100%;
 }
 
 nav {
@@ -14,6 +25,7 @@ nav {
   border-color: #B21212 !important;
   border-radius: 0 !important;
   font-family: 'Open Sans Condensed';
+  margin: 0 !important;
 }
 
 nav a {
@@ -24,7 +36,7 @@ nav a {
   color: #FFFFFF !important;
 }
 
-.navbar-form input, .navbar-form button{
+.navbar-form input, .navbar-form button {
   text-transform: uppercase;
 }
 
