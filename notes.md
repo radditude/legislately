@@ -5,6 +5,13 @@
 [x] legislator show pages are working properly
 
 next:
-[] get vote information to show on front page
+[x] get vote information to show on front page
 [] get ordering straightened out
 [] build newsfeed
+
+styling:
+[] 
+
+ideas:
+- media group for votes - need to get the photo url from GAPI though
+- one-line search input - since it needs the address as a string anyway
