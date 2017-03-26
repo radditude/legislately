@@ -1,15 +1,21 @@
-// FONTS
+// TABLE OF CONTENTS //
+//// 1. Fonts 
+//// 2. General Settings
+//// 3. Color & Typography Settings
+//// 4. Behavior (psuedo-classes)
+
+// 1. FONTS
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
 
-// BASIC SETTINGS
+// 2. BASIC SETTINGS
 
 html, body, .container {
   height: 100%;
 }
 
-// COLOR & TYPOGRAPHY (aka abusing the !important option to override Bootstrap defaults)
+// 3. COLOR & TYPOGRAPHY (aka abusing the !important option to override Bootstrap defaults)
 
 body {
   font-family: 'Lato' !important;
@@ -50,7 +56,7 @@ nav a, .navbar-form input, .navbar-form button {
   font-size: 30px;
 }
 
-// BEHAVIOR
+// 4. BEHAVIOR
 
 .navbar-nav li:hover, .navbar-nav li:focus {
   opacity: .5;
