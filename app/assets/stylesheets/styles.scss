@@ -24,6 +24,10 @@ nav a {
   color: #FFFFFF !important;
 }
 
+.navbar-form input, .navbar-form button{
+  text-transform: uppercase;
+}
+
 #navbar-brand {
   font-weight: 700;
   font-size: 30px;
