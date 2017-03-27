@@ -22,9 +22,9 @@
     <div ng-repeat="result in home.results.reps">
       <a ui-sref="show.activity({ id: result.id })" class="list-group-item">
         <h4 class="list-group-item-heading">
-          {{ result.name }} ({{ result.role }}, {{ result.party }})
+          {{ result.name }}
         </h4>
-        <p class="list-group-item-text">bodybodybody body body body</p>
+        <p class="list-group-item-text">{{ result.role }}, {{ result.party }}</p>
       </a>
     </div>
   </div>

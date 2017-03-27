@@ -76,8 +76,12 @@ nav a, .navbar-form input, .navbar-form button {
   color: #FEFFFE !important;
 }
 
-.jumbotron, .list-group {
+.jumbotron {
   margin: 25px;
+}
+
+.list-group {
+  margin: 0 40px 0 40px;
 }
 
 .follow-btn {

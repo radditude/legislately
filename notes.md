@@ -6,6 +6,10 @@
 
 next:
 [x] get vote information to show on front page
+[x] one-line search input - since it needs the address as a string anyway
+[x] set all headings to be open sans, condensed, etc
+[] styling for individual votes
+[] styling for the rest of the show page
 [] get ordering straightened out
 [] build newsfeed
 
@@ -14,4 +18,4 @@ styling:
 
 ideas:
 - media group for votes - need to get the photo url from GAPI though
-- one-line search input - since it needs the address as a string anyway
+- 
