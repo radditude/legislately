@@ -19,7 +19,10 @@ function LegislatorFactory($http) {
     }
 
     function findAddress(address) {
-      return $http.post('/locateaddress', address);
+      var params = {
+        address: address
+      };
+      return $http.post('/locateaddress', params);
     }
 }
 

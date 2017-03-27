@@ -1,12 +1,7 @@
 function HomeController(LegislatorFactory) {
   var home = this;
   // search params
-  home.address = {
-    street: "",
-    city: "",
-    state: "",
-    zip: ""
-  };
+  home.address;
 
   // results
   home.results;

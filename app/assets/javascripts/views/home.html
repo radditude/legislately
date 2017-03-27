@@ -3,7 +3,14 @@
   <h1>Search!</h1>
   <h3>Enter an address below to find your legislators</h3>
   <form ng-submit="home.findLegislators(home.address)">
-    <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="999 Anywhere Pl, Anytown, AS 12345" ng-model="home.address">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+
+    <!-- <div class="form-group">
       <label>House number & Street</label>
       <input type="text" class="form-control" ng-model="home.address.street">
     </div>
@@ -14,14 +21,14 @@
       <input type="text" class="form-control" ng-model="home.address.state">
       <label>Zip</label>
       <input type="text" class="form-control" ng-model="home.address.zip" required>
-    </div> 
-    <div class="form-group">
-      
     </div>
     <div class="form-group">
-      
+
     </div>
-    <input type="submit" value="Go!">
+    <div class="form-group">
+
+    </div> -->
+    <!-- <input type="submit" value="Go!"> -->
 </form>
 </div>
 
