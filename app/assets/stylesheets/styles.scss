@@ -1,5 +1,5 @@
 // TABLE OF CONTENTS //
-//// 1. Fonts 
+//// 1. Fonts
 //// 2. General Settings
 //// 3. Color & Typography Settings
 //// 4. Behavior (psuedo-classes)
@@ -13,6 +13,14 @@
 
 html, body, .container {
   height: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.padding {
+  padding: 25px;
 }
 
 // 3. COLOR & TYPOGRAPHY (aka abusing the !important option to override Bootstrap defaults)

@@ -4,6 +4,7 @@ function HomeController(LegislatorFactory) {
   home.address;
 
   // results
+  home.loading = false;
   home.results;
 
   // TODO: figure out how to display a loading animation while waiting
@@ -11,11 +12,15 @@ function HomeController(LegislatorFactory) {
   // address search are a little laggy.
 
   home.findLegislators = function(address) {
-      LegislatorFactory.findAddress(address).then(function(res) {
-        var data = res.data;
-        console.log(data)
-        home.results = data;
-      });
+    home.results = "";
+    home.loading = true;
+    
+    LegislatorFactory.findAddress(address).then(function(res) {
+      var data = res.data;
+      console.log(data)
+      home.loading = false;
+      home.results = data;
+    });
   }
 }
 

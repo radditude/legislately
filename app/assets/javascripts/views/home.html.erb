@@ -1,7 +1,7 @@
 <p ng-if="user">Welcome, {{ user.username }}</p>
 <div class="jumbotron">
-  <h1>Search!</h1>
-  <h3>Enter an address below to find your legislators</h3>
+  <h1>Find your Legislators</h1>
+  <h3>Search for an address below</h3>
   <form ng-submit="home.findLegislators(home.address)">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="999 Anywhere Pl, Anytown, AS 12345" ng-model="home.address">
@@ -32,7 +32,9 @@
 </form>
 </div>
 
-
+<div ng-if="home.loading" class="center padding">
+  <%= image_tag("loadingicon.gif") %>
+</div>
 <ul>
   <li ng-repeat="result in home.results.reps">
     <a ui-sref="show.activity({ id: result.id })">
