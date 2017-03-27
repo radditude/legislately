@@ -35,6 +35,13 @@ body {
   padding-top: 20px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans Condensed' !important;
+  font-weight: 300 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 nav {
   background-color: #B21212 !important;
   border-color: #B21212 !important;
@@ -62,6 +69,12 @@ nav a, .navbar-form input, .navbar-form button {
 #navbar-brand {
   font-weight: 700;
   font-size: 30px;
+}
+
+.jumbotron {
+  background-color: rgba(9, 113, 178, .8) !important;
+  color: #FEFFFE !important;
+  margin: 25px;
 }
 
 // 4. BEHAVIOR
