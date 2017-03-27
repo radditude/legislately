@@ -5,9 +5,9 @@
   <br>
   <form ng-submit="home.findLegislators(home.address)">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="999 Anywhere Pl, Anytown, AS 12345" ng-model="home.address">
+      <input type="text" class="form-control input-lg" placeholder="999 Anywhere Pl, Anytown, AS 12345" ng-model="home.address">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="submit">Go!</button>
+        <button class="btn btn-default input-lg" type="submit">Go!</button>
       </span>
     </div><!-- /input-group -->
 
@@ -36,11 +36,16 @@
 <div ng-if="home.loading" class="center padding">
   <%= image_tag("loadingicon.gif") %>
 </div>
-<ul>
-  <li ng-repeat="result in home.results.reps">
-    <a ui-sref="show.activity({ id: result.id })">
-      {{ result.name }} ({{ result.role }},
-      {{ result.party }}</span>)
-    </a>
-  </li>
-</ul>
+
+<div class="row">
+  <div class="list-group">
+    <div ng-repeat="result in home.results.reps">
+      <a ui-sref="show.activity({ id: result.id })" class="list-group-item">
+        <h4 class="list-group-item-heading">
+          {{ result.name }} ({{ result.role }}, {{ result.party }})
+        </h4>
+        <p class="list-group-item-text">bodybodybody body body body</p>
+      </a>
+    </div>
+  </div>
+</div>
