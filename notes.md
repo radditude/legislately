@@ -14,8 +14,14 @@ next:
 [] build newsfeed
 
 styling:
-[] 
+[]
 
-ideas:
-- media group for votes - need to get the photo url from GAPI though
-- 
+MLP:
+- styling for votes
+[x] basic styling for show pages
+- navigation for show pages
+- build newsfeed
+- figure out the location-saving thing
+- maybe search?
+[x] styling for search results
+[x] loading indicator
