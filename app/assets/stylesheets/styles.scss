@@ -1,15 +1,4 @@
-// TABLE OF CONTENTS //
-//// 1. Fonts
-//// 2. General Settings
-//// 3. Color & Typography Settings
-//// 4. Behavior (psuedo-classes)
 
-// 1. FONTS
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
-
-// 2. BASIC SETTINGS
 
 html, body, .container {
   height: 100%;
@@ -23,31 +12,18 @@ html, body, .container {
   padding: 25px;
 }
 
-// 3. COLOR & TYPOGRAPHY (aka abusing the !important option to override Bootstrap defaults)
-
-body {
-  font-family: 'Lato' !important;
-  background-color: #0971B2 !important;
-}
-
 .container {
   background-color: #FEFFFE;
-  padding-top: 20px;
+  padding: 20px 50px 0 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans Condensed' !important;
-  font-weight: 300 !important;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 nav {
-  background-color: #B21212 !important;
-  border-color: #B21212 !important;
-  border-radius: 0 !important;
   font-family: 'Open Sans Condensed';
-  margin: 0 !important;
   box-shadow: 1px 1px 2px;
 }
 
@@ -55,11 +31,6 @@ nav a {
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 2px;
-  color: #FEFFFE !important;
-}
-
-.icon-bar {
-  background-color: #FEFFFE !important;
 }
 
 nav a, .navbar-form input, .navbar-form button {
@@ -72,29 +43,9 @@ nav a, .navbar-form input, .navbar-form button {
 }
 
 .jumbotron {
-  background-color: rgba(9, 113, 178, .8) !important;
-  color: #FEFFFE !important;
-}
-
-.jumbotron {
   margin: 25px;
 }
 
 .list-group {
   margin: 0 40px 0 40px;
-}
-
-.list-group-item {
-  background-color: rgba(9, 113, 178, .3) !important;
-  border-color: rgba(9, 113, 178, .5) !important;
-}
-
-.follow-btn {
-  
-}
-
-// 4. BEHAVIOR
-
-.navbar-nav li:hover, .navbar-nav li:focus {
-  opacity: .5;
 }

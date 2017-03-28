@@ -19,6 +19,7 @@ styling:
 MLP:
 - styling for votes
 [x] basic styling for show pages
+- change awkward css overrides to sass variables
 - navigation for show pages
 - build newsfeed
 - figure out the location-saving thing
