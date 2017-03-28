@@ -1,4 +1,9 @@
+@mixin headers-styling {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
+$white-base:#FEFFFE;
 
 html, body, .container {
   height: 100%;
@@ -13,13 +18,12 @@ html, body, .container {
 }
 
 .container {
-  background-color: #FEFFFE;
+  background-color: $white-base;
   padding: 20px 50px 0 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  @include headers-styling;
 }
 
 nav {
@@ -30,11 +34,7 @@ nav {
 nav a {
   font-weight: 300;
   font-size: 18px;
-  letter-spacing: 2px;
-}
-
-nav a, .navbar-form input, .navbar-form button {
-  text-transform: uppercase;
+  @include headers-styling;
 }
 
 #navbar-brand {

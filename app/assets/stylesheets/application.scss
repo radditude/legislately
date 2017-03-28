@@ -22,6 +22,7 @@
 // BOOTSTRAP CUSTOMIZATIONS
 
 $body-bg: #0971B2;
+$font-family-sans-serif: 'Lato', sans-serif;
 $headings-font-family: 'Open Sans Condensed', sans-serif;
 $headings-font-weight: 300;
 $headings-color: #FEFFFE;
@@ -36,7 +37,7 @@ $navbar-default-color: $headings-color;
 $navbar-default-link-color: $headings-color;
 $navbar-default-toggle-icon-bar-bg: $headings-color;
 $navbar-margin-bottom: 0;
-$font-family-sans-serif: 'Lato', sans-serif;
+
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
