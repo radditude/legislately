@@ -22,6 +22,6 @@ MLP:
 - navigation for show pages
 - build newsfeed
 - figure out the location-saving thing
-- maybe search?
+- error handling for main search
 [x] styling for search results
 [x] loading indicator
