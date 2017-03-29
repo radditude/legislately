@@ -1,8 +1,29 @@
 <p><a ui-sref="show.info({ id: show.profile.member_id })">View Info</a></p>
 
-<ul>
-  <li ng-repeat="vote in show.votes">
-    <p>Voted {{ vote.position }} {{ vote.question }} - {{ vote.description }}</p>
-    <p><i>{{ vote.date | date : "M/d" }}</i></p>
-  </li>
-</ul>
+<!-- <div class="list-group">
+  <div ng-repeat="vote in show.votes" class="list-group-item">
+    <h4 class="list-group-item-heading">
+      Voted {{ vote.position }} {{ vote.question }}
+    </h4>
+    <p class="list-group-item-text">
+      {{ vote.description }}
+    </p>
+    <p class="list-group-item-text">
+      {{ vote.date | date : "M/d" }}
+    </p>
+  </div>
+</div> -->
+<div class="votes-container">
+  <div class="panel panel-default" ng-repeat="vote in show.votes">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <i>{{ vote.date | date : "M/d" }}</i> |
+        <b>{{ show.profile.first_name}} {{ show.profile.last_name }}</b>
+        voted <b>{{ vote.position }}</b> {{ vote.question }}
+      </h4>
+    </div>
+    <div class="panel-body">
+      {{ vote.description }}
+    </div>
+  </div>
+</div>
