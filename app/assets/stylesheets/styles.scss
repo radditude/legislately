@@ -7,8 +7,13 @@ $white-base:#FEFFFE;
 
 $depth-shadow: 1px 1px 2px;
 
-html, body, .container {
+html, body {
   height: 100%;
+}
+
+.container {
+  display: block;
+  overflow: auto;
 }
 
 .center {
@@ -57,5 +62,9 @@ nav a {
 }
 
 .votes-container {
-  margin: 0 25px 0 25px;
+  margin: 10px 25px 0 25px;
+}
+
+.nav-tabs {
+  margin: 0 25px 25px;
 }

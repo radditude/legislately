@@ -1,4 +1,14 @@
-<p><a ui-sref="show.activity({ id: show.profile.member_id })">View Activity</a></p>
-
+<ul class="nav nav-tabs">
+  <li role="presentation">
+    <a ui-sref="show.activity({ id: show.profile.member_id })">
+      Activity
+    </a>
+  </li>
+  <li role="presentation" class="active">
+    <a ui-sref="show.info({ id: show.profile.member_id })">
+      Profile
+    </a>
+  </li>
+</ul>
 
 <p>{{ show.profile.url }}</p>
