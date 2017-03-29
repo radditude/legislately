@@ -8,7 +8,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" id="navbar-brand" ui-sref="home">Legislately</a>
+      <a class="navbar-brand" id="navbar-brand" ui-sref="home" ng-hide="signedIn()">Legislately</a>
+      <a class="navbar-brand" id="navbar-brand" ui-sref="newsfeed" ng-show="signedIn()">Legislately</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

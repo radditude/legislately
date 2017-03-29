@@ -24,8 +24,9 @@ MLP:
 [x] styling for search results
 [x] loading indicator
 - info for show page profile
-- fix up login/register pages
+[x] fix up login/register pages
 - build newsfeed
+- style coming soon
 - error handling for main search
 
 - figure out the location-saving thing (and editing!)
