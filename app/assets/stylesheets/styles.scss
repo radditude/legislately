@@ -53,6 +53,10 @@ nav a {
 
 .jumbotron {
   margin: 25px;
+  a {
+    color: $white-base;
+    text-decoration: underline;
+  }
 }
 
 .list-group {

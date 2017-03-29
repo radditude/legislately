@@ -33,7 +33,7 @@ MLP:
 
 show pg fields:
 
-next election
+next election (calculated from class)
 
 contact:
 - form
