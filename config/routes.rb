@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post '/locateaddress', to: 'google_civic_api#index'
 
+  get '/following', to: 'user#following'
+
   devise_for :users
 
   root 'application#index'
