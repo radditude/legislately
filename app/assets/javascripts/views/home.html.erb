@@ -16,6 +16,17 @@
   <%= image_tag("loadingicon.gif") %>
 </div>
 
+<div ng-if="home.error" class="votes-container">
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h4>Sorry</h4>
+    </div>
+    <div class="panel-body">
+      We couldn't find anything for that search!
+    </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="list-group">
     <div ng-repeat="result in home.results.reps">

@@ -22,6 +22,7 @@
 // BOOTSTRAP CUSTOMIZATIONS
 
 $body-bg: #0971B2;
+$brand-danger: #B21212;
 $font-family-sans-serif: 'Lato', sans-serif;
 $headings-font-family: 'Open Sans Condensed', sans-serif;
 $headings-font-weight: 300;
@@ -33,12 +34,15 @@ $list-group-bg: rgba(9, 113, 178, .3);
 $list-group-border: rgba(9, 113, 178, .5);
 $navbar-border-radius: 0;
 $navbar-default-bg: #B21212;
+$navbar-default-brand-hover-color: #333;
 $navbar-default-border: $navbar-default-bg;
 $navbar-default-color: $headings-color;
 $navbar-default-link-color: $headings-color;
 $navbar-default-toggle-icon-bar-bg: $headings-color;
 $navbar-margin-bottom: 0;
 $nav-tabs-active-link-hover-bg: $headings-color;
+$panel-danger-border: $brand-danger;
+$panel-danger-heading-bg: $brand-danger;
 
 
 @import "bootstrap-sprockets";

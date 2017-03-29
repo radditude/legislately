@@ -25,11 +25,13 @@ MLP:
 [x] loading indicator
 - info for show page profile
 [x] fix up login/register pages
-- build newsfeed
+- build newsfeed (currently: getting list of follow-ees to show on webpage)
+
 - style coming soon
 - error handling for main search
 
-- figure out the location-saving thing (and editing!)
+Future:
+- figure out the location-saving thing (and editing a user!)
 
 
 show pg fields:
