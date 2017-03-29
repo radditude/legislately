@@ -14,6 +14,9 @@ html, body {
 .container {
   display: block;
   overflow: auto;
+  min-height: 50%;
+  background-color: $white-base;
+  padding: 20px 50px 0 50px;
 }
 
 .center {
@@ -22,11 +25,6 @@ html, body {
 
 .padding {
   padding: 25px;
-}
-
-.container {
-  background-color: $white-base;
-  padding: 20px 50px 0 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,7 +49,6 @@ nav a {
 
 .jumbotron {
   margin: 25px;
-  box-shadow: $depth-shadow;
 }
 
 .list-group {

@@ -26,7 +26,7 @@ $font-family-sans-serif: 'Lato', sans-serif;
 $headings-font-family: 'Open Sans Condensed', sans-serif;
 $headings-font-weight: 300;
 $headings-color: #FEFFFE;
-$jumbotron-color: #333333;
+$jumbotron-color: $headings-color;
 $jumbotron-heading-color: $headings-color;
 $jumbotron-bg: rgba(9, 113, 178, .8);
 $list-group-bg: rgba(9, 113, 178, .3);

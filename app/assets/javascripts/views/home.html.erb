@@ -22,7 +22,7 @@
     <div ng-repeat="result in home.results.reps">
       <a ui-sref="show.activity({ id: result.id })" class="list-group-item">
         <h3 class="list-group-item-heading">
-          {{ result.name }}
+          {{ result.name }} | Up for re-election in {{ result.next_election }}
         </h3>
         <p class="list-group-item-text">{{ result.role }}, {{ result.party }}</p>
       </a>

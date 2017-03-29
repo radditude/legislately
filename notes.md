@@ -17,12 +17,36 @@ styling:
 []
 
 MLP:
-- styling for votes
+[x] styling for votes
 [x] basic styling for show pages
 [x] change awkward css overrides to sass variables
-- navigation for show pages
-- build newsfeed
-- figure out the location-saving thing
-- error handling for main search
+[x] navigation for show pages
 [x] styling for search results
 [x] loading indicator
+- info for show page profile
+- fix up login/register pages
+- build newsfeed
+- error handling for main search
+
+- figure out the location-saving thing (and editing!)
+
+
+show pg fields:
+
+next election
+
+contact:
+- form
+- fax
+- phone
+
+links:
+- official url
+- govtrack
+- twitter, fb, yt - but only if they have them
+
+stats:
+- in congress since...
+- total bills sponsored
+- total bills cosponsored
+- average % party vote
