@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
- 
-// FONTS 
- 
+
+// FONTS
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
 
@@ -26,7 +26,8 @@ $font-family-sans-serif: 'Lato', sans-serif;
 $headings-font-family: 'Open Sans Condensed', sans-serif;
 $headings-font-weight: 300;
 $headings-color: #FEFFFE;
-$jumbotron-color: $headings-color;
+$jumbotron-color: #333333;
+$jumbotron-heading-color: $headings-color;
 $jumbotron-bg: rgba(9, 113, 178, .8);
 $list-group-bg: rgba(9, 113, 178, .3);
 $list-group-border: rgba(9, 113, 178, .5);
@@ -38,6 +39,6 @@ $navbar-default-link-color: $headings-color;
 $navbar-default-toggle-icon-bar-bg: $headings-color;
 $navbar-margin-bottom: 0;
 
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
