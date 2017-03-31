@@ -1,3 +1,7 @@
+<div ng-if="feed.loading" class="center padding">
+  <%= image_tag("loadingicon.gif") %>
+</div>
+
 <div class="votes-container">
   <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true ">
     <div class="panel-heading">
