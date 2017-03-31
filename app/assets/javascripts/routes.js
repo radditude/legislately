@@ -30,7 +30,12 @@ angular
       .state('newsfeed', {
         url: '/feed',
         templateUrl: 'views/newsfeed.html',
-        controller: 'NewsfeedController as feed'
+        controller: 'NewsfeedController as feed',
+        resolve: {
+          following: function(UserFactory) {
+            return UserFactory.following();
+          }
+        }
       })
       .state('show', {
         url: '/legislators/:id',
