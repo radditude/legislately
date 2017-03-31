@@ -1,5 +1,10 @@
-function NewsfeedController() {
-  
+function NewsfeedController(UserFactory) {
+  var feed = this;
+  feed.following;
+
+  UserFactory.following.then(function(res) {
+    console.log(res)
+  })
 }
 
 angular
