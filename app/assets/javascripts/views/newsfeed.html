@@ -1,1 +1,14 @@
-<p>{{ feed.actualData }}</p>
+<div class="votes-container">
+  <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true ">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <i>{{ vote.date | date : "M/d" }}</i> |
+        <b><a ui-sref='show.info({ id: vote.member_id })'>{{ feed.following[vote.member_id] }}</a></b>
+        voted <b>{{ vote.position }}</b> {{ vote.question }}
+      </h4>
+    </div>
+    <div class="panel-body">
+      {{ vote.description }}
+    </div>
+  </div>
+</div>
