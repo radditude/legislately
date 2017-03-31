@@ -12,8 +12,8 @@ function NewsfeedController(UserFactory, LegislatorFactory, following, $q) {
       LegislatorFactory.votes(id).then(function(res) {
         feed.activity.push(res.data.votes);
         callsComplete += 1;
-
-        if (callsComplete === feed.following.length) {
+        
+        if (callsComplete === Object.keys(feed.following).length) {
           deferred.resolve();
         }
       })
