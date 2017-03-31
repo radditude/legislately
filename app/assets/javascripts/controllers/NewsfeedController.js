@@ -1,6 +1,6 @@
 function NewsfeedController(UserFactory, LegislatorFactory, following, $q) {
   var feed = this;
-  feed.following = following.data.following;
+  feed.following = following.data;
   feed.activity = [];
   feed.actualData;
 
@@ -8,7 +8,7 @@ function NewsfeedController(UserFactory, LegislatorFactory, following, $q) {
     var deferred = $q.defer();
     var callsComplete = 0;
 
-    feed.following.forEach(function(id, index) {
+    Object.keys(feed.following).forEach(function(id) {
       LegislatorFactory.votes(id).then(function(res) {
         feed.activity.push(res.data.votes);
         callsComplete += 1;
@@ -26,7 +26,10 @@ function NewsfeedController(UserFactory, LegislatorFactory, following, $q) {
     feed.actualData = feed.activity.reduce((a,b) => {
       return a.concat(b);
     });
+    console.log(feed.actualData)
   })
+
+  console.log(feed.following);
 
   // UserFactory.following().then(function(res) {
   //   feed.following = res.data.following;
