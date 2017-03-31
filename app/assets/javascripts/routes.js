@@ -30,7 +30,7 @@ angular
       .state('newsfeed', {
         url: '/feed',
         templateUrl: 'views/newsfeed.html',
-        controller: 'NewsfeedController as news'
+        controller: 'NewsfeedController as feed'
       })
       .state('show', {
         url: '/legislators/:id',
