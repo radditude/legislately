@@ -1,6 +1,7 @@
 function ShowController(votes, info, following, LegislatorFactory) {
   var show = this;
   show.following = false;
+  show.search;
 
   show.profile = info.data;
   if (following.data[show.profile.member_id]) {

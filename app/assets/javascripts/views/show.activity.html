@@ -11,8 +11,10 @@
   </li>
 </ul>
 
+<input type="text" class="form-control input-lg input-padding" placeholder="Search for subjects or specific bills" ng-model="show.search">
+
 <div class="votes-container">
-  <div class="panel panel-default" ng-repeat="vote in show.votes">
+  <div class="panel panel-default" ng-repeat="vote in show.votes | filter: show.search">
     <div class="panel-heading">
       <h4 class="panel-title">
         <i>{{ vote.date | date : "M/d" }}</i> |
