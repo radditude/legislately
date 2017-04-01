@@ -5,7 +5,7 @@
     <a class="btn btn-default btn-xs follow-btn active" ng-click='show.follow(show.profile.member_id, "unfollow")' ng-if="show.following">Following</a>
   </h2>
 
-  <p>{{ show.profile.roles[0].title }} ({{ show.profile.current_party }}-{{ show.profile.roles[0].state }}{{ show.profile.roles[0].district }})</p>
+  <p class="jumbotron-body">{{ show.profile.roles[0].title }} ({{ show.profile.current_party }}-{{ show.profile.roles[0].state }}{{ show.profile.roles[0].district }})</p>
 </div>
 
 <ui-view></ui-view>
