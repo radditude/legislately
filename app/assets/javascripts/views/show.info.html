@@ -23,6 +23,13 @@
           <p>Bills cosponsored: {{ show.profile.roles[0].bills_cosponsored }}</p>
           <p>Votes with party {{ show.profile.roles[0].votes_with_party_pct }}% of the time</p>
           <p>Misses votes {{ show.profile.roles[0].missed_votes_pct }}% of the time</p>
+          <p ng-if="show.profile.roles[0].committees">Committees:
+            <ul>
+              <li ng-repeat="committee in show.profile.roles[0].committees">
+                {{ committee.name }}
+              </li>
+            </ul>
+          </p>
         </div> <!-- panel-body -->
       </div> <!-- panel -->
     </div> <!-- col-sm-6 -->
@@ -45,10 +52,10 @@
           <h3 class="contrast-text">Contact</h3>
         </div>
         <div class="panel-body">
-          <p ng-if="show.profile.roles[0].contact_form"><a href="{{ show.profile.roles[0].contact_form }}">Contact Form</a></p>
+          <p ng-if="show.profile.roles[0].contact_form"><a href="{{ show.profile.roles[0].contact_form }}" target="_blank">Contact Form</a></p>
           <p ng-if="show.profile.roles[0].phone">Phone: <a href="tel:{{ show.profile.roles[0].phone}}">{{ show.profile.roles[0].phone}}</a></p>
           <p ng-if="show.profile.roles[0].fax">Fax: {{ show.profile.roles[0].fax }}</p>
-          <p ng-if="show.profile.roles[0].office">{{ show.profile.roles[0].office }}<br>Washington, DC 20002</p>
+          <p ng-if="show.profile.roles[0].office">{{ show.profile.roles[0].office }}</p>
         </div> <!-- panel-body -->
       </div> <!-- panel -->
     </div> <!-- col-sm-6 -->
@@ -58,10 +65,10 @@
           <h3 class="contrast-text">Links</h3>
         </div>
         <div class="panel-body">
-          <span ng-if="show.profile.url"><a href="{{ show.profile.url }}">Home Page</a><br></span>
-          <span ng-if="show.profile.twitter_account">Twitter: <a href="https://www.twitter.com/{{ show.profile.twitter_account }}">{{ show.profile.twitter_account }}</a><br></span>
-          <span ng-if="show.profile.facebook_account">Facebook: <a href="https://www.facebook.com/{{ show.profile.facebook_account }}">{{ show.profile.facebook_account }}</a><br></span>
-          <span ng-if="show.profile.youtube_account">Youtube: <a href="https://www.youtube.com/{{ show.profile.youtube_account }}">{{ show.profile.youtube_account }}</a></span>
+          <span ng-if="show.profile.url"><a href="{{ show.profile.url }}" target="_blank">Home Page</a><br></span>
+          <span ng-if="show.profile.twitter_account" target="_blank">Twitter: <a href="https://www.twitter.com/{{ show.profile.twitter_account }}">{{ show.profile.twitter_account }}</a><br></span>
+          <span ng-if="show.profile.facebook_account" target="_blank">Facebook: <a href="https://www.facebook.com/{{ show.profile.facebook_account }}">{{ show.profile.facebook_account }}</a><br></span>
+          <span ng-if="show.profile.youtube_account" target="_blank">Youtube: <a href="https://www.youtube.com/{{ show.profile.youtube_account }}">{{ show.profile.youtube_account }}</a></span>
         </div> <!-- panel-body -->
       </div> <!-- panel -->
     </div> <!-- col-sm-6 -->
