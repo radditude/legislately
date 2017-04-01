@@ -11,7 +11,10 @@
   </li>
 </ul>
 
-<input type="text" class="form-control input-lg input-padding" placeholder="Search for subjects or specific bills" ng-model="show.search">
+<div class="form-group input-padding">
+  <input type="text" class="form-control input-lg" placeholder="Search for subjects or specific bills" ng-model="show.search">
+</div>
+
 
 <div class="votes-container">
   <div class="panel panel-default" ng-repeat="vote in show.votes | filter: show.search">

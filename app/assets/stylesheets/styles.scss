@@ -54,8 +54,10 @@ nav a {
 .jumbotron {
   margin: 25px;
   .jumbotron-text-link {
-    color: $white-base;
-    text-decoration: underline;
+    color: rgba(254, 255, 254 ,.7);
+  }
+  .jumbotron-body {
+    font-size: 110%;
   }
 }
 
