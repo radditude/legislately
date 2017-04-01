@@ -4,6 +4,7 @@ function NewsfeedController(UserFactory, LegislatorFactory, following, $q) {
   feed.activity = [];
   feed.actualData;
   feed.loading;
+  feed.search;
 
   if (Object.keys(feed.following).length === 0) {
     feed.loading = false;
