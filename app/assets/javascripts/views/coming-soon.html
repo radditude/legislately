@@ -1,8 +1,16 @@
 <h2>Coming Soon</h2>
 <h4>To a House of Congress Near You</h4>
 
-<ul>
-  <li ng-repeat="bill in soon.bills">
-    {{ bill.description }}
+<!-- <ul class="list-group">
+  <li class="list-group-item" ng-repeat="bill in soon.bills">
+    {{ bill.description }} {{ bill.context }}
   </li>
-</ul>
+</ul> -->
+
+<table class="table">
+  <tr ng-repeat="bill in soon.bills">
+    <td>{{ bill.legislative_day | date: "MMM d"}}</td>
+    <td><a href="{{bill.url}}" class="capitalize" target="_blank">{{ bill.chamber }}</a></td>
+    <td>{{ bill.description }} {{ bill.context }}</td>
+  </tr>
+</table>
