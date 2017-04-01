@@ -2,6 +2,17 @@
   <%= image_tag("loadingicon.gif") %>
 </div>
 
+<div ng-if="!feed.loading && !feed.actualData" class="votes-container">
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h4>You're not following anybody</h4>
+    </div>
+    <div class="panel-body">
+      Go <a ui-sref="home">find your legislators!</a>
+    </div>
+  </div>
+</div>
+
 <div class="votes-container">
   <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true ">
     <div class="panel-heading">

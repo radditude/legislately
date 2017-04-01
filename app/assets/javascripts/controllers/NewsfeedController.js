@@ -3,7 +3,14 @@ function NewsfeedController(UserFactory, LegislatorFactory, following, $q) {
   feed.following = following.data;
   feed.activity = [];
   feed.actualData;
-  feed.loading = true;
+  feed.loading;
+
+  if (Object.keys(feed.following).length === 0) {
+    feed.loading = false;
+  } else {
+    feed.loading = true;
+  }
+
 
   function getData() {
     var deferred = $q.defer();

@@ -5,7 +5,15 @@ class LegislatorController < ApplicationController
     def follow
         legislator_id = params[:id]
         user_id = current_user.id
-        UserLegislator.create(legislator_id: legislator_id, user_id: user_id)
+
+        if legislator_params['action'] == "follow"
+          UserLegislator.create(legislator_id: legislator_id, user_id: user_id)
+          render json: { follow: true }
+        else
+          line = UserLegislator.find_by(legislator_id: legislator_id, user_id: user_id)
+          line.destroy
+          render json: { follow: false }
+        end
     end
 
     def info
@@ -54,5 +62,11 @@ class LegislatorController < ApplicationController
       body_hash = JSON.parse(@resp.body)
       # bills = body_hash['results'][0]
       render json: body_hash
+    end
+
+    private
+
+    def legislator_params
+      params.require(:legislator).permit(:action)
     end
 end

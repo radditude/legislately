@@ -11,8 +11,12 @@ function ShowController(votes, info, following, LegislatorFactory) {
   console.log(show.votes);
 
   show.follow = function(id, action) {
-    LegislatorFactory.follow(id).then(function(res) {
-      show.following = true;
+    LegislatorFactory.follow(id, action).then(function(res) {
+      if (res.data.follow === true) {
+        show.following = true;
+      } else if (res.data.follow === false) {
+        show.following = false;
+      }
     });
   };
 }

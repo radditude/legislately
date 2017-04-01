@@ -6,8 +6,11 @@ function LegislatorFactory($http) {
     info: getInfo
   }
 
-    function followLegislator(id) {
-        return $http.post('/legislators/' + id + '/follow');
+    function followLegislator(id, action) {
+      var params = {
+        action: action
+      }
+      return $http.post('/legislators/' + id + '/follow', params);
     }
 
     function getVotes(id) {
