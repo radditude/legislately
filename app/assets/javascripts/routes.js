@@ -48,8 +48,10 @@ angular
           votes: function(LegislatorFactory, $stateParams) {
             return LegislatorFactory.votes($stateParams.id);
           },
-          following: function(UserFactory) {
-            return UserFactory.following();
+          following: function(UserFactory, $rootScope) {
+            if ($rootScope.user) {
+              return UserFactory.following();
+            }
           }
         }
       })

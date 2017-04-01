@@ -1,10 +1,10 @@
-function ShowController(votes, info, following, LegislatorFactory) {
+function ShowController(votes, info, following, LegislatorFactory, $state, $rootScope) {
   var show = this;
   show.following = false;
   show.search;
 
   show.profile = info.data;
-  if (following.data[show.profile.member_id]) {
+  if (following && following.data[show.profile.member_id]) {
     show.following = true;
   }
 
@@ -22,17 +22,21 @@ function ShowController(votes, info, following, LegislatorFactory) {
   console.log(show.profile);
 
   show.follow = function(id, action) {
-    LegislatorFactory.follow(id, action).then(function(res) {
-      if (res.data.follow === true) {
-        show.following = true;
-      } else if (res.data.follow === false) {
-        show.following = false;
-      }
-    });
+    if (!$rootScope.user) {
+      $state.go('register');
+    } else {
+      LegislatorFactory.follow(id, action).then(function(res) {
+        if (res.data.follow === true) {
+          show.following = true;
+        } else if (res.data.follow === false) {
+          show.following = false;
+        }
+      });
+    }
   };
 }
 
-ShowController.$inject = ['votes', 'info', 'following', 'LegislatorFactory'];
+ShowController.$inject = ['votes', 'info', 'following', 'LegislatorFactory', '$state', '$rootScope'];
 
 angular
   .module('legislately')
