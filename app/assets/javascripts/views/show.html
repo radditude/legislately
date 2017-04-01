@@ -1,7 +1,8 @@
 <div class="jumbotron">
   <h2>
     {{ show.profile.first_name }} {{ show.profile.last_name }}&nbsp;&nbsp;
-    <a class="btn btn-default btn-xs follow-btn" ng-click='show.follow(show.profile.member_id)'>Follow</a>
+    <a class="btn btn-default btn-xs follow-btn" ng-click='show.follow(show.profile.member_id, "follow")' ng-if="!show.following">Follow</a>
+    <a class="btn btn-default btn-xs follow-btn active" ng-click='show.follow(show.profile.member_id, "unfollow")' ng-if="show.following">Following</a>
   </h2>
 
   <p>{{ show.profile.roles[0].title }} ({{ show.profile.current_party }}-{{ show.profile.roles[0].state }}{{ show.profile.roles[0].district }})</p>

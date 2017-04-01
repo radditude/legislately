@@ -47,6 +47,9 @@ angular
           },
           votes: function(LegislatorFactory, $stateParams) {
             return LegislatorFactory.votes($stateParams.id);
+          },
+          following: function(UserFactory) {
+            return UserFactory.following();
           }
         }
       })
