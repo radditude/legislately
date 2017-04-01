@@ -70,6 +70,10 @@ angular
             return SCAPIFactory.getComingSoon();
           }
         }
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'views/about.html'
       });
     $urlRouterProvider.otherwise('/');
   })
