@@ -34,7 +34,7 @@ source "https://rails-assets.org" do
 end
 gem "angular-rails-templates"
 
-# for the single API request we need to make from the backend
+# for making API requests from the backend
 
 gem 'faraday'
 
