@@ -1,6 +1,6 @@
 (function(){
   'use strict'
-  
+
   function AuthController($rootScope, Auth, $state) {
     var auth = this;
     var config = {headers: {'X-HTTP-Method-Override': 'POST'}};
@@ -23,7 +23,7 @@
         // TODO: extract some of this code into a UserService
         $rootScope.user = user;
         // TODO: make this not an alert
-        alert("You're all signed in, " + user.username);
+        // alert("You're all signed in, " + user.username);
         $state.go('newsfeed');
       }, function(response) {
         // TODO: also this
