@@ -10,7 +10,7 @@
         // TODO: extract some of this code into a UserService
         $rootScope.user = user;
         // TODO: make this not an alert
-        alert('Thanks for signing up, ' + user.username);
+        alert('Thanks for signing up!');
         $state.go('newsfeed');
       }, function(response) {
         // TODO: also this
