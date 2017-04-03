@@ -26,5 +26,4 @@ test:
 production:
   <<: *default
   database: legislately_production
-  username: legislately
-  password: ENV['LEGISLATELY_DATABASE_PASSWORD']
+  
