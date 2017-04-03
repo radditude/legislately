@@ -1,15 +1,20 @@
-// handles all calls to Sunlight Congress API
+(function(){
+  'use strict'
 
-function SCAPIFactory($http, $sce) {
-  return {
-    getComingSoon: getComingSoon
+  function SCAPIFactory($http) {
+    return {
+      getComingSoon: getComingSoon
+    }
+
+    function getComingSoon() {
+      return $http.get('https://congress.api.sunlightfoundation.com/upcoming_bills?order=scheduled_at');
+    };
   }
 
-  function getComingSoon() {
-    return $http.get('https://congress.api.sunlightfoundation.com/upcoming_bills?order=scheduled_at');
-  };
-}
+  SCAPIFactory.$inject = ['$http'];
 
-angular
-  .module('legislately')
-  .factory('SCAPIFactory', SCAPIFactory);
+  angular
+    .module('legislately')
+    .factory('SCAPIFactory', SCAPIFactory);
+
+}());

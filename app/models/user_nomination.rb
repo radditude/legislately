@@ -1,2 +1,0 @@
-class UserNomination < ApplicationRecord
-end

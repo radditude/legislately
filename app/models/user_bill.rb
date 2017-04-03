@@ -1,2 +1,0 @@
-class UserBill < ApplicationRecord
-end

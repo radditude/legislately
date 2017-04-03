@@ -1,2 +1,7 @@
-angular
-  .module('legislately', ['ui.router', 'Devise', 'templates']);
+(function () {
+  'use strict'
+  
+  angular
+    .module('legislately', ['ui.router', 'Devise', 'templates']);
+
+}());

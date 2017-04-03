@@ -1,11 +1,17 @@
-function ComingSoonController(comingSoon) {
-  var soon = this;
-  soon.bills = comingSoon.data.results;
-  console.log(soon.bills);
-}
+(function(){
+  'use strict'
+  
+  function ComingSoonController(comingSoon) {
+    var soon = this;
+    soon.bills = comingSoon.data.results;
+    console.log(soon.bills);
+  }
 
-ComingSoonController.$inject = ['comingSoon'];
+  ComingSoonController.$inject = ['comingSoon'];
 
-angular
-  .module('legislately')
-  .controller('ComingSoonController', ComingSoonController);
+  angular
+    .module('legislately')
+    .controller('ComingSoonController', ComingSoonController);
+
+
+}());
