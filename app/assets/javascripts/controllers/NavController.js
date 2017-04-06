@@ -2,8 +2,9 @@
   'use strict'
 
   function NavController($scope, Auth, $rootScope) {
-    $scope.signedIn = Auth.isAuthenticated;
-    $scope.logout = Auth.logout;
+    var nav = this;
+    nav.signedIn = Auth.isAuthenticated;
+    nav.logout = Auth.logout;
 
     Auth.currentUser().then(function(user) {
       $rootScope.user = user;
