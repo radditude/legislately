@@ -16,7 +16,11 @@
 </div>
 
 
-<votes-list votes="show.votes" names="show.profile.name"></votes-list>
+<div class="votes-container">
+  <div ng-repeat="vote in show.votes">
+    <vote data="vote" name="show.profile.name"></vote>
+  </div>
+</div>
 <!-- <div class="votes-container">
   <div class="panel panel-default" ng-repeat="vote in show.votes | filter: show.search">
     <div class="panel-heading">
