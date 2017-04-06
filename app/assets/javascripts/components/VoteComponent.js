@@ -1,14 +1,17 @@
 (function() {
   'use strict'
 
-  var VotesComponent = {
-      templateUrl: 'views/votes.html',
-      bindings: {
-        votes: '@'
+  function VotesComponent() {
+      return {
+        templateUrl: 'views/votes.html',
+        scope: {
+          votes: '=',
+          following: '='
+        }
       }
   }
 
   angular
     .module('legislately')
-    .component('votesComponent', VotesComponent);
+    .directive('votesComponent', VotesComponent);
 }());

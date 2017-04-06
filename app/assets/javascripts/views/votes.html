@@ -1,8 +1,8 @@
-<div class="panel panel-default" ng-repeat="vote in votes" scope="vote">
+<div class="panel panel-default" ng-repeat="vote in votes">
   <div class="panel-heading">
     <h4 class="panel-title">
-      <i>{{ $ctrl.vote.date | date : "M/d" }}</i> |
-      <b><a ui-sref='show.info({ id: vote.member_id })'>{{ feed.following[vote.member_id] }}</a></b>
+      <i>{{ vote.date | date : "M/d" }}</i> |
+      <b><a ui-sref='show.info({ id: vote.member_id })'>{{ following[vote.member_id] }}</a></b>
       voted <b>{{ vote.position }}</b>
       <span ng-if="vote.bill.number">on {{ vote.bill.number }}</span>
     </h4>

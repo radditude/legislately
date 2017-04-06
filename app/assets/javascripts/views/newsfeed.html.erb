@@ -1,3 +1,5 @@
+
+
 <input type="text" class="form-control input-lg" placeholder="Search for subjects or specific bills" ng-model="feed.search">
 
 <div ng-if="feed.loading" class="center padding">
@@ -16,7 +18,7 @@
 </div>
 
 <div class="votes-container">
-  <votes-component votes="feed.actualData"></votes-component>
+  <votes-component votes="feed.actualData" following="feed.following"></votes-component>
 
   <!-- <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true | filter: feed.search ">
     <div class="panel-heading">
