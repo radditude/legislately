@@ -35,16 +35,16 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Confirm</label>
       <div class="col-sm-10">
-        <input class="form-control" name="password_confirmation" type="password" placeholder="Retype password" ng-model="auth.user.password_confirmation" required>
+        <input class="form-control" minlength="6" name="password_confirmation" type="password" placeholder="Retype password" ng-model="auth.user.password_confirmation" required>
       
         <div ng-messages="form.password_confirmation.$error" ng-if="form.password_confirmation.$touched">
           <div ng-message="required">
             Please confirm your password!
           </div>
         </div>
-        
+        <!-- TODO: make this a custom validation -->
         <div ng-if="(auth.user.password != auth.user.password_confirmation) && form.password.$dirty && form.password_confirmation.$dirty">
-          Password confirmation doesn't match!
+          Your passwords don't match!
         </div>
       </div>
     </div>

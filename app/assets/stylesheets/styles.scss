@@ -91,3 +91,7 @@ nav a {
 .show-info-container {
   margin: 25px 25px 0 25px;
 }
+
+input.ng-invalid.ng-touched {
+  border: solid #B21212 1px;
+}
