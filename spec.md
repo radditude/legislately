@@ -18,9 +18,9 @@ User can follow or unfollow legislators by clicking a button on their profile.
 
 Search results and newsfeed results link to legislator show pages
 
-- [ ] Data should be validated in Angular before submission
+- [x] Data should be validated in Angular before submission
 - [x] Must talk to the Rails backend using $http and Services. **you may not use $resource**
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
 - [x] You have a large number of small Git commits
