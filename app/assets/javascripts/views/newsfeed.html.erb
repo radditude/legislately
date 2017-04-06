@@ -16,7 +16,9 @@
 </div>
 
 <div class="votes-container">
-  <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true | filter: feed.search ">
+  <votes-component votes="feed.actualData"></votes-component>
+
+  <!-- <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true | filter: feed.search ">
     <div class="panel-heading">
       <h4 class="panel-title">
         <i>{{ vote.date | date : "M/d" }}</i> |
@@ -30,5 +32,5 @@
       <p><i>{{ vote.question }}</i> <span ng-if="vote.description">- {{ vote.description }}</span></p>
       <p>{{ vote.bill.title }}</p>
     </div>
-  </div>
+  </div> -->
 </div>

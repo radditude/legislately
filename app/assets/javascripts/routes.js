@@ -81,6 +81,6 @@
           templateUrl: 'views/about.html'
         });
       $urlRouterProvider.otherwise('/');
-    })  
+    })
 
 }());
