@@ -2,6 +2,6 @@
   'use strict'
   
   angular
-    .module('legislately', ['ui.router', 'Devise', 'templates']);
+    .module('legislately', ['ui.router', 'Devise', 'templates', 'ngMessages']);
 
 }());
