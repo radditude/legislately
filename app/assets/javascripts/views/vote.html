@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <i>{{ data.date | date : "M/d" }}</i> |
+      <b><a ui-sref='show.info({ id: data.member_id })'>{{ name }}</a></b>
+      voted <b>{{ data.position }}</b>
+      <span ng-if="data.bill.number">on {{ data.bill.number }}</span>
+    </h4>
+  </div>
+  <div class="panel-body">
+
+    <p><i>{{ data.question }}</i> <span ng-if="data.description">- {{ data.description }}</span></p>
+    <p>{{ data.bill.title }}</p>
+  </div>
+</div>

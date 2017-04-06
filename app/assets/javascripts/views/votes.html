@@ -1,17 +1,5 @@
 <div class="votes-container">
-  <div class="panel panel-default" ng-repeat="vote in votes">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <i>{{ vote.date | date : "M/d" }}</i> |
-        <b><a ui-sref='show.info({ id: vote.member_id })'>{{ following[vote.member_id] }}</a></b>
-        voted <b>{{ vote.position }}</b>
-        <span ng-if="vote.bill.number">on {{ vote.bill.number }}</span>
-      </h4>
-    </div>
-    <div class="panel-body">
-
-      <p><i>{{ vote.question }}</i> <span ng-if="vote.description">- {{ vote.description }}</span></p>
-      <p>{{ vote.bill.title }}</p>
-    </div>
+  <div ng-repeat="vote in votes">
+    <vote data="vote" name="names[vote.member_id]"></vote>
   </div>
 </div>

@@ -11,6 +11,8 @@
       show.following = true;
     }
 
+    show.profile.name = show.profile.first_name + " " + show.profile.last_name;
+    
     if (show.profile.roles[0].senate_class === "3") {
       show.profile.next_election = 2022;
     } else if (show.profile.roles[0].senate_class === "2") {

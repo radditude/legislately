@@ -1,17 +1,18 @@
 (function() {
   'use strict'
 
-  function VotesList() {
+  function Vote() {
       return {
-        templateUrl: 'views/votes.html',
+        replace: true,
+        templateUrl: 'views/vote.html',
         scope: {
-          votes: '=',
-          following: '='
+          data: '=',
+          name: '='
         }
       }
   }
 
   angular
     .module('legislately')
-    .directive('votesList', VotesList);
+    .directive('vote', Vote);
 }());
