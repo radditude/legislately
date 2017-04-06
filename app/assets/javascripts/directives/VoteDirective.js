@@ -1,7 +1,7 @@
 (function() {
   'use strict'
 
-  function VotesComponent() {
+  function VotesList() {
       return {
         templateUrl: 'views/votes.html',
         scope: {
@@ -13,5 +13,5 @@
 
   angular
     .module('legislately')
-    .directive('votesComponent', VotesComponent);
+    .directive('votesList', VotesList);
 }());

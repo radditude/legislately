@@ -1,5 +1,3 @@
-
-
 <input type="text" class="form-control input-lg" placeholder="Search for subjects or specific bills" ng-model="feed.search">
 
 <div ng-if="feed.loading" class="center padding">
@@ -17,22 +15,4 @@
   </div>
 </div>
 
-<div class="votes-container">
-  <votes-component votes="feed.actualData" following="feed.following"></votes-component>
-
-  <!-- <div class="panel panel-default" ng-repeat="vote in feed.actualData | orderBy: 'date' : true | filter: feed.search ">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <i>{{ vote.date | date : "M/d" }}</i> |
-        <b><a ui-sref='show.info({ id: vote.member_id })'>{{ feed.following[vote.member_id] }}</a></b>
-        voted <b>{{ vote.position }}</b>
-        <span ng-if="vote.bill.number">on {{ vote.bill.number }}</span>
-      </h4>
-    </div>
-    <div class="panel-body">
-
-      <p><i>{{ vote.question }}</i> <span ng-if="vote.description">- {{ vote.description }}</span></p>
-      <p>{{ vote.bill.title }}</p>
-    </div>
-  </div> -->
-</div>
+<votes-list votes="feed.actualData" following="feed.following"></votes-list>
