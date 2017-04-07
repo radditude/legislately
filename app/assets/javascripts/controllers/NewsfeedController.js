@@ -34,6 +34,7 @@
       return deferred.promise;
     }
 
+
     getData().then(function(res) {
       feed.actualData = feed.activity.reduce(function(a,b) {
         return a.concat(b);

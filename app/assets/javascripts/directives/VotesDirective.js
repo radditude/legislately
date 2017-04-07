@@ -6,7 +6,8 @@
         templateUrl: 'views/votes.html',
         scope: {
           votes: '=',
-          names: '='
+          names: '=',
+          search: '='
         }
       }
   }
