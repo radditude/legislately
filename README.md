@@ -23,12 +23,7 @@ export PROPUBLICA_API_KEY=yourpropublicaapikey
 
 ### Prerequisites
 
-You'll need Ruby and RubyGems installed - I like [RVM](https://rvm.io/rvm/install) for this purpose.
-
-```
-\curl -sSL https://get.rvm.io | bash -s stable
-rvm install 2.3.1
-```
+You'll need Ruby and RubyGems installed.
 
 You'll also need PostgreSQL installed locally. Installation varies among systems, but you can find detailed install instructions [here](http://www.postgresguide.com/setup/install.html).
 
